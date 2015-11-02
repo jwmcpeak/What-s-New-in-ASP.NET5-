@@ -1,0 +1,15 @@
+﻿@inject MessageApp.Data.IMessageRepository Messages
+
+@{
+    // ViewBag.Title = "Home Page";
+}
+
+
+@foreach (var message in Messages.All())
+{
+    <div class="container">
+        <h2>@message.Title</h2>
+        <p>@message.Content</p>
+    </div>
+
+}
